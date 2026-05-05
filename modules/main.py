@@ -1,3 +1,15 @@
+import os
+import re
+import sys
+import json
+import time
+import asyncio
+import requests
+import subprocess
+import logging
+import aiohttp
+import tempfile
+from aiohttp import ClientSession
 import pyrogram.utils
 
 # Override Pyrogram's outdated ID limits permanently
@@ -11,19 +23,6 @@ def get_peer_type_new(peer_id: int) -> str:
         return "chat"
 
 pyrogram.utils.get_peer_type = get_peer_type_new
-
-import os
-import re
-import sys
-import json
-import time
-import asyncio
-import requests
-import subprocess
-import logging
-import aiohttp
-import tempfile
-from aiohttp import ClientSession
 # ... (Aapke baaki ke original imports aur code yahan se shuru honge)
 from subprocess import getstatusoutput
 from pyrogram import Client, filters
