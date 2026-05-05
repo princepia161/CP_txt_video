@@ -44,9 +44,9 @@ OWNER_IDS = [890749443]  # Replace with the actual owner user IDs
 
 cookies_file_path = "modules/cookies.txt"
 # Global variables
-log_channel_id = -1003646612944
+log_channel_id = 1003646612944
 authorized_users = [890749443]
-ALLOWED_CHANNEL_IDS = [-1003646612944]
+ALLOWED_CHANNEL_IDS = [1003646612944]
 my_name = "ᡕᠵ᠊ᡃ່࡚ࠢ࠘ ⸝່ࠡࠣ᠊߯᠆ࠣ࠘ᡁࠣ࠘᠊᠊ࠢ࠘𐡏 —͟͞͞ ℝịcị𐌽"
 overlay = None 
 accept_logs = 0
