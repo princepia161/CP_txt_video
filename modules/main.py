@@ -4,6 +4,19 @@ import sys
 import json
 import time
 import asyncio
+import pyrogram.utils
+
+# Override Pyrogram's outdated ID limits
+def get_peer_type_new(peer_id: int) -> str:
+    peer_id_str = str(peer_id)
+    if not peer_id_str.startswith("-"):
+        return "user"
+    elif peer_id_str.startswith("-100"):
+        return "channel"
+    else:
+        return "chat"
+
+pyrogram.utils.get_peer_type = get_peer_type_new
 import requests
 import subprocess
 import logging
