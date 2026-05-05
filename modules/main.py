@@ -719,7 +719,7 @@ async def luminant_command(bot: Client, m: Message):
     input: Message = await bot.listen(editable.chat.id)
     if input.document:
         x = await input.download()        
-        await bot.send_document(log_channel_id, x)                    
+        #await bot.send_document(log_channel_id, x)                    
         await input.delete(True)
         file_name, ext = os.path.splitext(os.path.basename(x))
         credit = my_name
