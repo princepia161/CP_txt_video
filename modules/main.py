@@ -1,3 +1,17 @@
+import pyrogram.utils
+
+# Override Pyrogram's outdated ID limits permanently
+def get_peer_type_new(peer_id: int) -> str:
+    peer_id_str = str(peer_id)
+    if not peer_id_str.startswith("-"):
+        return "user"
+    elif peer_id_str.startswith("-100"):
+        return "channel"
+    else:
+        return "chat"
+
+pyrogram.utils.get_peer_type = get_peer_type_new
+
 import os
 import re
 import sys
@@ -10,6 +24,7 @@ import logging
 import aiohttp
 import tempfile
 from aiohttp import ClientSession
+# ... (Aapke baaki ke original imports aur code yahan se shuru honge)
 from subprocess import getstatusoutput
 from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
