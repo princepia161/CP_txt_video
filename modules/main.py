@@ -61,9 +61,9 @@ def load_initial_data():
     global log_channel_id, authorized_users, ALLOWED_CHANNEL_IDS, my_name, accept_logs
     global total_running_time, max_running_time
   
-    log_channel_id = load_log_channel_id(collection)
-    authorized_users = load_authorized_users(collection)
-    ALLOWED_CHANNEL_IDS = load_allowed_channel_ids(collection)
+    #log_channel_id = load_log_channel_id(collection)
+    #authorized_users = load_authorized_users(collection)
+    #ALLOWED_CHANNEL_IDS = load_allowed_channel_ids(collection)
     my_name = load_name(collection)
     accept_logs = load_accept_logs(collection)
     # Load bot running time and max running time
@@ -719,7 +719,7 @@ async def luminant_command(bot: Client, m: Message):
     input: Message = await bot.listen(editable.chat.id)
     if input.document:
         x = await input.download()        
-        #await bot.send_document(log_channel_id, x)                    
+        await bot.send_document(log_channel_id, x)                    
         await input.delete(True)
         file_name, ext = os.path.splitext(os.path.basename(x))
         credit = my_name
