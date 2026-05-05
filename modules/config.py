@@ -3,3 +3,4 @@ BOT_NAME = "Genx"
 BOT_TOKEN = "8564398983:AAHuuntq53gVgwIxQash63fatvHq-27BJTc"
 API_ID = 20807000
 API_HASH = "cde2366a7c61e23f4cb44618cbe6cf70"
+MONGO_URI = "mongodb+srv://rowdybro013:DmnZ3s14aRbfA8tb@cluster01.ramjm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster01"
