@@ -44,9 +44,9 @@ OWNER_IDS = [890749443]  # Replace with the actual owner user IDs
 
 cookies_file_path = "modules/cookies.txt"
 # Global variables
-log_channel_id = 1003646612944
+log_channel_id = -1003646612944
 authorized_users = [890749443]
-ALLOWED_CHANNEL_IDS = [1003646612944]
+ALLOWED_CHANNEL_IDS = [-1003646612944]
 my_name = "ᡕᠵ᠊ᡃ່࡚ࠢ࠘ ⸝່ࠡࠣ᠊߯᠆ࠣ࠘ᡁࠣ࠘᠊᠊ࠢ࠘𐡏 —͟͞͞ ℝịcị𐌽"
 overlay = None 
 accept_logs = 0
@@ -1029,13 +1029,13 @@ async def process_links(bot, m, links, b_name, count, end_count, raw_text2, res,
                         url = re.search(r"(https://.*?playlist.m3u8.*?)\"", text).group(1)
 
             elif "media-cdn.classplusapp" in url:
-                headers = {'Host': 'api.classplusapp.com', 'x-access-token': 'eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJpZCI6MTI0NDQyMjIwLCJvcmdJZCI6MTMxNSwidHlwZSI6MSwibW9iaWxlIjoiOTE3NDA0MDM0NjQ3IiwibmFtZSI6Ikt1bmFsICIsImVtYWlsIjoia3VuYWxkYWxhbDAzMDlAZ21haWwuY29tIiwiaXNGaXJzdExvZ2luIjp0cnVlLCJkZWZhdWx0TGFuZ3VhZ2UiOiJFTiIsImNvdW50cnlDb2RlIjoiSU4iLCJpc0ludGVybmF0aW9uYWwiOjAsImlzRGl5Ijp0cnVlLCJsb2dpblZpYSI6Ik90cCIsImZpbmdlcnByaW50SWQiOiI4M2M4ZDczOTAwYzc0NjYzYzI2MGJkMzA1ZDYxOTM0MCIsImlhdCI6MTcxODg3Njg5MSwiZXhwIjoxNzE5NDgxNjkxfQ.tV2t5whgnQwrfWLibVIOHV5JN0iDdQwlqDtVDCT_i1zQy4lhF_G3a0zfz7e5S8re', 'user-agent': 'Mobile-Android', 'app-version': '1.4.37.1', 'api-version': '18', 'device-id': '5d0d17ac8b3c9f51', 'device-details': '2848b866799971ca_2848b8667a33216c_SDK-30', 'accept-encoding': 'gzip'}
+                headers = {'Host': 'api.classplusapp.com', 'x-access-token': 'eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJpZCI6MTY0MDQwNzkyLCJvcmdJZCI6ODEyNDEwLCJ0eXBlIjoxLCJtb2JpbGUiOiI5MTgyMTAxNjk5NTEiLCJuYW1lIjoiUHJpbmNlcGlhIiwiZW1haWwiOiJwcmluY2VwaWExNjFAZ21haWwuY29tIiwiaXNJbnRlcm5hdGlvbmFsIjowLCJkZWZhdWx0TGFuZ3VhZ2UiOiJFTiIsImNvdW50cnlDb2RlIjoiSU4iLCJjb3VudHJ5SVNPIjoiOTEiLCJ0aW1lem9uZSI6IkdNVCs1OjMwIiwiaXNEaXkiOnRydWUsIm9yZ0NvZGUiOiJra3Vja3kiLCJpc0RpeVN1YmFkbWluIjowLCJmaW5nZXJwcmludElkIjoiOTY4ODUxMDRhZDc1ZWRiMjY4YWI2NTQ3ODVlM2JlNjciLCJpYXQiOjE3Nzc5MTg1NTIsImV4cCI6MTc3ODUyMzM1Mn0.5bZMRO7AZTb0oeLoFrbDgMLY7PdfgKgtdiziWqUk43KvDZin38Uv2XVE2tnTfjN9', 'user-agent': 'Mobile-Android', 'app-version': '1.4.37.1', 'api-version': '18', 'device-id': '5d0d17ac8b3c9f51', 'device-details': '2848b866799971ca_2848b8667a33216c_SDK-30', 'accept-encoding': 'gzip'}
                 params = (('url', f'{url}'),)
                 response = requests.get('https://api.classplusapp.com/cams/uploader/video/jw-signed-url', headers=headers, params=params)
                 url = response.json()['url']	
 
             elif 'videos.classplusapp' in url:
-                url = requests.get(f'https://api.classplusapp.com/cams/uploader/video/jw-signed-url?url={url}', headers={'x-access-token': 'eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJpZCI6MzgzNjkyMTIsIm9yZ0lkIjoyNjA1LCJ0eXBlIjoxLCJtb2JpbGUiOiI5MTcwODI3NzQyODkiLCJuYW1lIjoiQWNlIiwiZW1haWwiOm51bGwsImlzRmlyc3RMb2dpbiI6dHJ1ZSwiZGVmYXVsdExhbmd1YWdlIjpudWxsLCJjb3VudHJ5Q29kZSI6IklOIiwiaXNJbnRlcm5hdGlvbmFsIjowLCJpYXQiOjE2NDMyODE4NzcsImV4cCI6MTY0Mzg4NjY3N30.hM33P2ai6ivdzxPPfm01LAd4JWv-vnrSxGXqvCirCSpUfhhofpeqyeHPxtstXwe0'}).json()['url']
+                url = requests.get(f'https://api.classplusapp.com/cams/uploader/video/jw-signed-url?url={url}', headers={'x-access-token': 'eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJpZCI6MTY0MDQwNzkyLCJvcmdJZCI6ODEyNDEwLCJ0eXBlIjoxLCJtb2JpbGUiOiI5MTgyMTAxNjk5NTEiLCJuYW1lIjoiUHJpbmNlcGlhIiwiZW1haWwiOiJwcmluY2VwaWExNjFAZ21haWwuY29tIiwiaXNJbnRlcm5hdGlvbmFsIjowLCJkZWZhdWx0TGFuZ3VhZ2UiOiJFTiIsImNvdW50cnlDb2RlIjoiSU4iLCJjb3VudHJ5SVNPIjoiOTEiLCJ0aW1lem9uZSI6IkdNVCs1OjMwIiwiaXNEaXkiOnRydWUsIm9yZ0NvZGUiOiJra3Vja3kiLCJpc0RpeVN1YmFkbWluIjowLCJmaW5nZXJwcmludElkIjoiOTY4ODUxMDRhZDc1ZWRiMjY4YWI2NTQ3ODVlM2JlNjciLCJpYXQiOjE3Nzc5MTg1NTIsImV4cCI6MTc3ODUyMzM1Mn0.5bZMRO7AZTb0oeLoFrbDgMLY7PdfgKgtdiziWqUk43KvDZin38Uv2XVE2tnTfjN9'}).json()['url']
 
             elif "master.mpd" in url:
                 vid_id = url.split('/')[-2]
@@ -1323,7 +1323,7 @@ help_text = """
 
  **Example:**
  ```
- /add_channel -100973847334
+ /add_channel -1003646612944
  ```
 OR Use /add_chat 
 
@@ -1331,7 +1331,7 @@ OR Use /add_chat
 
  **Example:**
  ```
- /remove_channel -1003947384
+ /remove_channel -1003646612944
  ```
 OR Use /remove_chat
 
@@ -1380,7 +1380,7 @@ OWNER_TEXT = """
 
 **Example:**
 ```
-/add_log_channel -10054567890
+/add_log_channel -1003646612944
 ```
 
 2. **/accept_logs** - 📥 Set this to **1** if you want the backup.
@@ -1404,14 +1404,14 @@ OWNER_TEXT = """
 
 **Example:**
 ```
-/add_auth 3495890
+/add_auth 890749443
 ```
 
 8. **/remove_auth `<userID>`** - ➖ Remove a user from the authorized users list.
 
 **Example:**
 ```
-/remove_auth 3957994
+/remove_auth 890749443
 ```
 
 🔑 **Allowed Channels Commands:**
@@ -1422,14 +1422,14 @@ OWNER_TEXT = """
 
  **Example:**
  ```
- /add_channel -100973847334
+ /add_channel -1003646612944
  ```
 
 11. **/remove_channel `<-100channelid>`** - ➖ Remove a channel from the allowed channels list.
 
  **Example:**
  ```
- /remove_channel -1003947384
+ /remove_channel -1003646612944
  ```
 
 🚀 **General Commands:**
